@@ -21,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Kushal Portfolio</title>
+    <title>Henvi Portfolio</title>
     <style>
         .hover\:shadow-blue:hover {
             box-shadow: 0 0 10px 4px rgba(47, 61, 247, 0.5);
@@ -33,7 +33,7 @@
     <!-- navbar  -->
     <nav class="nav fixed w-full z-10 transition duration-500 ease-in-out navbar" id="navbar">
         <div class="container mx-auto flex items-center justify-between p-2">
-            <a href="#" class="font-bold text-xl text-[#443bb7] hover:text-indigo-600">KH.Pipaliya</a>
+            <a href="#" class="font-bold text-xl text-[#443bb7] hover:text-indigo-600">HK.Kaklotar</a>
             <div class="md:hidden">
                 <button id="mobile-menu-toggle" class="text-[#443bb7] focus:outline-none">
                     <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -55,12 +55,12 @@
 
     <!-- Main Content -->
     <section class="container mx-auto p-8 section" id="home-section">
-        <div class="flex flex-wrap items-center justify-center">
+        <div class="flex flex-wrap mt-5 items-center justify-center">
             <div class="w-full md:w-1/2 lg:w-1/2 p-4">
                 <div class="flex flex-col items-start justify-center h-full ftco-animate fadeInUp ftco-animated">
                     <span class="text-[#443bb7] text-3xl mt-3">Hey!</span>
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white my-4">I'm <span
-                            class="text-[#443bb7]">KUSHAL PIPALIYA</span></h1>
+                            class="text-[#443bb7]">HENVI KAKLOTAR</span></h1>
                     <p class="text-lg mb-4 text-gray-200">Welcome to my portfolio. Let's work something amazing
                         together.</p>
                     <div class="flex flex-col sm:flex-row text-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -76,13 +76,13 @@
                 </div>
             </div>
             <div class="w-full md:w-1/2 lg:w-1/2 p-4">
-                <img src="img/fmy2.png" alt="Your Image" class="w-full h-auto rounded-md mb-4">
+                <img src="img/my2.png" alt="Your Image" class="w-4/5 h-auto rounded-md mb-4">
             </div>
         </div>
     </section>
     <hr class="w-4/5 mx-auto fade-in mb-5">
 
-    <section class="flex justify-center mt-3 mb-8 section" id="resume-section">
+    <section class="flex justify-center mt-3 mb-8 section fade-in" id="resume-section">
         <div class="max-w-2xl w-full mx-auto">
             <div class="text-center pb-5">
                 <h1 class="text-5xl font-bold mb-2">Resume</h1>
@@ -128,7 +128,7 @@
     </section>
     <hr class="w-4/5 mx-auto fade-in mb-5">
 
-    <section class="flex items-center justify-center md:h-screen section bg-black " id="about-section">
+    <section class="flex items-center justify-center md:h-screen section bg-black fade-in" id="about-section">
         <div class="max-w-md mt-8 mx-auto">
             <h1 class="text-5xl font-bold text-center mb-5">About</h1>
             <div class="bg-black rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:scale-105 hover:text-[#443bb7] hover:shadow-blue sm:hover:scale-110 p-6 sm:p-8">
@@ -165,10 +165,10 @@
     <hr class="w-4/5 mx-auto fade-in mb-5">
 
     <!-- Project Details -->
-    <section class="flex items-center justify-center md:h-screen section bg-black text-white" id="mywork-section">
+    <section class="flex items-center justify-center md:h-screen section bg-black text-gray-400 fade-in" id="mywork-section">
         <div class="max-w-screen-lg w-full">
             <div class="text-center p-4">
-                <h2 class="text-xl text-[#443bb7] font-serif mb-4">My Work</h2>
+                <h2 class="text-5xl font-bold text-[#443bb7] mb-4">My Work</h2>
                 <div class="grid grid-cols-1 mt-5 md:grid-cols-2 lg:grid-cols-3 gap-4 font-sans">
                     <div
                         class="bg-black rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
@@ -176,7 +176,7 @@
                             src="https://www.svgrepo.com/show/261945/web-development.svg" alt="HTML/CSS/JS">
                         <div class="p-2">
                             <h3 class="text-md md:text-lg font-bold mb-1">HTML/CSS/JS Project</h3>
-                            <p class="text-xs">View My GitHub...!</p>
+                            <p class="text-xs text-gray-200">View My GitHub...!</p>
                         </div>
                     </div>
 
@@ -186,7 +186,7 @@
                             src="https://cdn.worldvectorlogo.com/logos/c--4.svg" alt="C#">
                         <div class="p-2">
                             <h3 class="text-md md:text-lg font-bold mb-1">C# Project</h3>
-                            <p class="text-xs">View My GitHub...!</p>
+                            <p class="text-xs text-gray-200">View My GitHub...!</p>
                         </div>
                     </div>
 
@@ -196,7 +196,7 @@
                             alt="PHP">
                         <div class="p-2">
                             <h3 class="text-md md:text-lg font-bold mb-1">PHP Project</h3>
-                            <p class="text-xs">View My GitHub...!</p>
+                            <p class="text-xs text-gray-200">View My GitHub...!</p>
                         </div>
                     </div>
 
@@ -205,8 +205,8 @@
                         <img class="w-full h-32 md:h-16 object-center"
                             src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg" alt=".Net">
                         <div class="p-2">
-                            <h3 class="text-md md:text-lg font-bold mb-1">.Net Project</h3>
-                            <p class="text-xs">View My GitHub...!</p>
+                            <h3 class="text-md md:text-lg font-bold mb-1 text-gray-400">.Net Project</h3>
+                            <p class="text-xs text-gray-200">View My GitHub...!</p>
                         </div>
                     </div>
 
@@ -216,30 +216,21 @@
                             src="https://cdn.worldvectorlogo.com/logos/java-4.svg" alt="Java">
                         <div class="p-2">
                             <h3 class="text-md md:text-lg font-bold mb-1">Java Project</h3>
-                            <p class="text-xs">View My GitHub...!</p>
+                            <p class="text-xs text-gray-200">View My GitHub...!</p>
                         </div>
                     </div>
 
-                    <div
-                        class="bg-black rounded-lg overflow-hidden shadow-md transition-transform transform hover:scale-105">
-                        <img class="w-full h-32 md:h-16 object-center"
-                            src="https://www.svgrepo.com/show/452091/python.svg" alt="Python">
-                        <div class="p-2">
-                            <h3 class="text-md md:text-lg font-bold mb-1">Python Project</h3>
-                            <p class="text-xs">View My GitHub...!</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
  <hr class="w-4/5 mx-auto fade-in mb-5">
-    <section class="ftco-section contact-section ftco-no-pb bg-black text-[#443bb7]" id="contact-section">
+    <section class="ftco-section contact-section ftco-no-pb bg-black text-[#443bb7] fade-in" id="contact-section">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section text-center ftco-animate fadeInUp ftco-animated">
                     <h1 class="text-5xl">Contact</h1>
-                    <p>Get in touch for collaboration, support, or any inquiries - let's bring your vision to life!</p>
+                    <p class="text-gray-400">Get in touch for collaboration, support, or any inquiries - let's bring your vision to life!</p>
                 </div>
             </div>
             <div class="container mx-auto bg-black mt-10 p-4">
@@ -249,34 +240,34 @@
                             class="bg-black p-8 rounded shadow-md" onsubmit="convertToUpperCase()">
                             <div class="mb-4">
                                 <label for="name" class="block text-1xl font-bold mb-2">Your Name:</label>
-                                <input type="text" id="name" name="name" autocomplete="off" placeholder="KH....."
-                                    class="w-full px-3 py-2 border-2 rounded shadow-md bg-black text-[#443bb7] focus:outline-none focus:border-green-500 focus:ring-0">
+                                <input type="text" id="name" name="name" autocomplete="off" placeholder="Full Name"
+                                    class="w-full px-3 py-2 border-2 rounded shadow-md bg-black text-[#443bb7] focus:outline-none focus:border-indigo-500 focus:ring-0">
                             </div>
 
                             <div class="mb-4">
                                 <label for="email" class="block text-1xl font-bold mb-2">Your
                                     Email:</label>
                                 <input type="email" id="email" name="email" placeholder="abc@example.com"
-                                    class="w-full px-3 py-2 border-2 rounded shadow-md bg-black text-[#443bb7] focus:outline-none focus:border-green-500 focus:ring-0">
+                                    class="w-full px-3 py-2 border-2 rounded shadow-md bg-black text-[#443bb7] focus:outline-none focus:border-indigo-500 focus:ring-0">
                             </div>
 
                             <div class="mb-4">
                                 <label for="message" class="block text-1xl font-bold mb-2">Your
                                     Message:</label>
                                 <textarea id="message" name="message" rows="4" placeholder="Write your message here..."
-                                    class="w-full px-3 py-2 border-2 rounded shadow-md bg-black text-[#443bb7] focus:outline-none focus:border-green-500 focus:ring-0"></textarea>
+                                    class="w-full px-3 py-2 border-2 rounded shadow-md bg-black text-[#443bb7] focus:outline-none focus:border-indigo-500 focus:ring-0"></textarea>
                             </div>
 
                             <div class="mb-4">
                                 <button type="submit"
-                                    class="bg-[#443bb7] text-white py-2 px-4 rounded hover:bg-green-800">Send
+                                    class="bg-[#443bb7] text-white py-2 px-4 rounded hover:bg-indigo-800">Send
                                     Message</button>
                             </div>
                         </form>
                     </div>
                     <div class="w-full md:w-1/3 px-4">
                         <div class="bg-black p-8 rounded shadow-md">
-                            <h3 class="text-2xl font-semibold mb-4">HENVI KAKLOTER</h3>
+                            <h3 class="text-2xl font-semibold mb-4">HENVI KAKLOTAR</h3>
                             <p class="text-1xl mb-2">Address: <a
                                     class="text-gray-500 hover:text-white focus:text-[#443bb7]"
                                     href="https://maps.app.goo.gl/sKMHbJfC7rdbQHNU7">Katargam, Surat, Gujarat, IN</a>
@@ -295,43 +286,80 @@
         <section class="bg-black p-8 mt-8 section" id="contact-section">
             <div class="mx-auto text-center p-5 text-black z-10 relative">
                 <div class="flex items-center justify-center mb-4">
-                    <a href="https://www.github.com/Kushal129" class="mx-2 footer-icon">
+                    <a href="https://github.com/HenviKaklotar" class="mx-2 footer-icon">
                         <img src="img/logo/git.png" alt="GitHub" class="w-6 h-auto logo-green">
                     </a>
                     <a href="" target="_blank" class="mx-2 footer-icon">
                         <img src="img/logo/linkd.png" alt="LinkedIn" class="w-6 h-auto logo-green">
                     </a>
-                    <a href="" target="_blank" class="mx-2 footer-icon">
+                    <!-- <a href="" target="_blank" class="mx-2 footer-icon">
                         <img src="img/logo/insta.png" alt="Instagram" class="w-6 h-auto logo-green">
-                    </a>
-                    <a href="" target="_blank"
+                    </a> -->
+                    <!-- <a href="" target="_blank"
                         class="mx-2 footer-icon">
                         <img src="img/logo/fb.png" alt="Facebook" class="w-6 h-auto logo-green">
                     </a>
                     <a href="" target="_blank" class="mx-2 footer-icon">
                         <img src="img/logo/twt.png" alt="Twitter" class="w-6 h-auto logo-green">
-                    </a>
+                    </a> -->
                     <a href="mailto:henvikk81@email.com" class="mx-2 footer-icon">
                         <img src="img/logo/email.png" alt="Email" class="w-6 h-auto logo-green">
                     </a>
                 </div>
-                <p class="text-sm text-[#049309]">&copy; Copyright by KH Development <span id="currentYear"></span> All
+                <p class="text-sm text-[#443bb7]">&copy; Copyright by KH Development <span id="currentYear"></span> All
                     rights
                     reserved.
                 </p>
             </div>
             <div
-                class="before:absolute before:inset-x-0 before:top-0 before:h-6 before:bg-gradient-to-t before:from-green-500 before:to-transparent before:opacity-30 animate-pulse">
+                class="before:absolute before:inset-x-0 before:top-0 before:h-6 before:bg-gradient-to-t before:from-[#6C60FF] before:to-transparent before:opacity-30 animate-pulse">
             </div>
         </section>
     </div>
 
-    <!-- <div id="toaster" class="toaster">
+    <div id="toaster" class="toaster">
         <span id="toast-message" class="message"></span>
-    </div> -->
+    </div>
 
     <script src="script.js"></script>
 </body>
-
+<script>
+    var toaster = document.getElementById('toaster');
+     var message = document.getElementById('toast-message');
+     var form = document.getElementById("my-form");
+     var submitButton = form.querySelector("button[type='submit']");
+     toaster.classList.add('hidden');
+ 
+     function showToaster(str) {
+         message.innerText = str || "Success! Your message has been sent.";
+         toaster.classList.remove('hidden');
+         setTimeout(function () {
+             toaster.classList.add('hidden');
+         }, 5000);
+     }
+ 
+     async function handleSubmit(event) {
+         event.preventDefault();
+         var status = document.getElementById("my-form-status");
+         var data = new FormData(event.target);
+         fetch(event.target.action, {
+             method: form.method,
+             body: data,
+             headers: {
+                 'Accept': 'application/json'
+             }
+         }).then(response => {
+             if (response.ok) {
+                 showToaster("Thanks for Contacting us..! We Will Contact You Soon..!");
+                 form.reset();
+             }
+         }).catch(error => {
+             status.innerHTML = "Oops! There was a problem submitting your form";
+         });
+     }
+ 
+     form.addEventListener("submit", handleSubmit);
+ 
+ </script>
 
 </html>
