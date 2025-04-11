@@ -1,12 +1,71 @@
-# React + Vite
+# Henvi Kaklotar's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive portfolio showcasing my journey in cybersecurity and web development.
 
-Currently, two official plugins are available:
+🔗 **[View Live Demo](https://henviportfolio.vercel.app/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Portfolio Preview](https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 🎨 Modern UI with smooth animations
+- 📱 Fully responsive design
+- ⚡ Built with React and Framer Motion
+- 🎯 Sections for projects, skills, and contact
+- 🌟 Interactive elements and hover effects
+- 🔥 Optimized performance
+
+## Tech Stack
+
+- React.js
+- Tailwind CSS
+- Framer Motion
+- Lucide React Icons
+
+## Project Structure
+
+```
+src/
+├── App.jsx          # Main application component
+├── index.css        # Global styles
+└── main.jsx         # Application entry point
+```
+
+## Key Sections
+
+### 🏠 Home
+- Professional introduction
+- Quick navigation
+- Resume download option
+
+### 👤 About
+- Personal journey
+- Educational background
+- Technical skills overview
+
+### 💼 Projects
+- Cybersecurity projects showcase
+- Web development portfolio
+- Detailed project descriptions
+
+### 📬 Contact
+- Contact form
+- Social media links
+- Professional email
+
+## Performance Features
+
+- Optimized image loading
+- Smooth scroll behavior
+- Lazy-loaded components
+- Efficient animation handling
+
+## Connect With Me
+
+- [LinkedIn](https://www.linkedin.com/in/henvi-kaklotar-005597215/)
+- [GitHub](https://github.com/kaklotarhenvi)
+- Email: henvikk81@gmail.com
+
+## License
+
+© 2025 Henvi Kaklotar. All rights reserved.

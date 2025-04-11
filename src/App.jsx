@@ -1,37 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, Linkedin, Mail, Download, Shield, Globe, ChevronDown, ExternalLink } from 'lucide-react';
-import { useInView } from 'react-intersection-observer';
+import Navbar from './components/Navbar';
 import myimg from '../public/myimg.jpeg';
 
+
 function App() {
-  const [activeSection, setActiveSection] = useState('home');
-  const [ref, inView] = useInView({
-    threshold: 0.3,
-    triggerOnce: true
-  });
-
-  // Update active section based on scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'about', 'projects', 'contact'];
-      const current = sections.find(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
-        }
-        return false;
-      });
-      if (current) {
-        setActiveSection(current);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const fadeInUp = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
@@ -39,38 +13,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <motion.nav
-       initial={{ scale: 0.5, opacity: 0 }}
-       animate={{ scale: 1, opacity: 1 }}
-       transition={{ duration: 0.8 }}
-      className="fixed top-0 left-0 right-0 bg-white/80 backdrop-blur-md z-50 shadow-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <motion.a 
-              href="#"
-              className="text-xl font-bold text-blue-600"
-              whileHover={{ scale: 1.05 }}
-            >
-              HK
-            </motion.a>
-            <div className="hidden md:flex space-x-8">
-              {['Home', 'About', 'Projects', 'Contact'].map((item) => (
-                <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className={`text-gray-600 hover:text-blue-600 transition-colors ${
-                    activeSection === item.toLowerCase() ? 'text-blue-600' : ''
-                  }`}
-                  whileHover={{ y: -2 }}
-                >
-                  {item}
-                </motion.a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </motion.nav>
+      <Navbar />
 
       {/* Hero Section */}
       <section id="home" className="min-h-screen pt-16 relative overflow-hidden bg-gradient-to-b from-blue-50 to-white">
@@ -80,7 +23,7 @@ function App() {
             initial="hidden"
             animate="visible"
             variants={fadeInUp}
-            className="max-w-4xl mx-auto text-center relative z-10"
+            className="max-w-4xl mx-auto text-center relative z-10 px-4"
           >
             <motion.div
               initial={{ scale: 0.5, opacity: 0 }}
@@ -88,7 +31,7 @@ function App() {
               transition={{ duration: 0.8 }}
               className="mb-8"
             >
-              <div className="w-40 h-40 mx-auto rounded-full border-4 border-blue-600/20 p-1 shadow-xl">
+              <div className="w-32 h-32 md:w-40 md:h-40 mx-auto rounded-full border-4 border-blue-600/20 p-1 shadow-xl">
                 <img 
                   src={myimg}
                   alt="Profile"
@@ -101,7 +44,7 @@ function App() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
-              className="text-6xl md:text-7xl font-bold mb-6"
+              className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
             >
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
                 Henvi Kaklotar
@@ -114,7 +57,7 @@ function App() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="mb-8"
             >
-              <h2 className="text-2xl md:text-3xl text-gray-700 font-light">
+              <h2 className="text-xl md:text-2xl lg:text-3xl text-gray-700 font-light">
                 Cybersecurity Aficionado
                 <span className="mx-3 text-blue-600">&</span>
                 Web Developer
@@ -129,16 +72,16 @@ function App() {
             >
               <motion.a 
                 href="/Henvi_KaklotarResume.pdf" 
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg group"
+                className="bg-blue-600 text-white px-6 py-3 md:px-8 md:py-4 rounded-lg hover:bg-blue-700 transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg group text-sm md:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Download size={20} className="group-hover:animate-bounce" />
+                <Download size={18} className="group-hover:animate-bounce" />
                 Download Resume
               </motion.a>
               <motion.a 
                 href="#about" 
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-50 transition-all flex items-center justify-center gap-2 group"
+                className="border-2 border-blue-600 text-blue-600 px-6 py-3 md:px-8 md:py-4 rounded-lg hover:bg-blue-50 transition-all flex items-center justify-center gap-2 group text-sm md:text-base"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -146,26 +89,12 @@ function App() {
                 <ChevronDown className="group-hover:translate-y-1 transition-transform" />
               </motion.a>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1 }}
-              className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-            >
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ repeat: Infinity, duration: 2 }}
-              >
-                <ChevronDown className="text-blue-600" size={32} />
-              </motion.div>
-            </motion.div>
           </motion.div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-24 bg-white relative overflow-hidden" ref={ref}>
+      <section id="about" className="py-24 bg-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 opacity-70" />
           <div className="absolute inset-0 bg-grid-pattern opacity-5" />
@@ -209,7 +138,7 @@ function App() {
                   </div>
                 </motion.div>
 
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <motion.div 
                     className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 text-white shadow-lg"
                     initial={{ opacity: 0, y: 20 }}
@@ -569,7 +498,7 @@ const webProjects = [
   {
     title: "Cricket Scoreboard",
     description: "Real-time cricket scoring application with live updates, statistics, and team management.",
-    tech: ["React.js", "Tailwind CSS", "Firebase", "Redux"],
+    tech: ["React.js", "Tailwind CSS"],
     image: "https://portfoliobykushal.netlify.app/assets/cricket-CHoG9arH.png",
   }
 ];
